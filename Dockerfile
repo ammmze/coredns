@@ -13,7 +13,7 @@ k8s_gateway:github.com/ori-edge/k8s_gateway\
 ' plugin.cfg && go get github.com/ori-edge/k8s_gateway@v${K8S_GATEWAY_VERSION}
 
 # build coredns
-RUN go get github.com/coredns/coredns/plugin/etcd && make gen && make && ./coredns -plugins
+RUN make gen && make && ./coredns -plugins
 
 # add stage with the latest certs
 FROM debian:stable-slim AS certs
