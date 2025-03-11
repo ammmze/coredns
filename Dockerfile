@@ -1,4 +1,4 @@
-FROM golang:1.24.0 AS build
+FROM golang:1.24.1 AS build
 ARG COREDNS_VERSION=1.8.6
 ARG K8S_GATEWAY_VERSION=0.2.0
 
